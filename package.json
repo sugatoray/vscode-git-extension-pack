@@ -2,7 +2,7 @@
   "name": "vscode-git-extension-pack",
   "displayName": "Git Extension Pack",
   "description": "Popular Visual Studio Code extensions for Git",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "sugatoray",
   "author": {
     "name": "Sugato Ray",
@@ -18,7 +18,7 @@
   },
   "icon": "icon-square.png",
   "galleryBanner": {
-    "color": "#f2a25e",
+    "color": "#916fdc",
     "theme": "dark"
   },
   "engines": {
