@@ -1,7 +1,3 @@
-# vscode-git-extension-pack
-
-VS Code Git Extensions Pack
-
 <!-- markdownlint-disable MD041 -->
 [![vscode-badge][#vsce-svg-url]][#vsce-marketplace-url]
 
