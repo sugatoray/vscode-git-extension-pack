@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+- Update the `README.md` with additional installation and downloads information.
+
 ## 1.0.1
 
 - Fix typos on `README.md`.
