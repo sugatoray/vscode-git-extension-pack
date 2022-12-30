@@ -5,6 +5,10 @@
 - Update icon (with colored background for greater visibility against dark backgrounds).
 - Add extension: `dzhavat.git-cheatsheet` [source](https://marketplace.visualstudio.com/items?itemName=dzhavat.git-cheatsheet)
 
+## 1.0.3
+
+- Changes added as pre-step for the next version.
+
 ## 1.0.2
 
 - Update the `README.md` with additional installation and downloads information.
