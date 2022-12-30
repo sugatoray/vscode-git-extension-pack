@@ -1,11 +1,13 @@
 <!-- markdownlint-disable MD041 -->
+<!---
 [![vscode-badge][#vsce-svg-url-version]][#vsce-marketplace-url]
-[![Installs][#vsce-svg-url-installs]][#vsce-marketplace-url] 
+[![Installs][#vsce-svg-url-installs]][#vsce-marketplace-url]
 [![Downloads][#vsce-svg-url-downloads]][#vsce-marketplace-url]
 
 [#vsce-svg-url-version]: https://vsmarketplacebadge.apphb.com/version/sugatoray.vscode-git-extension-pack.svg
 [#vsce-svg-url-installs]: https://vsmarketplacebadge.apphb.com/installs/sugatoray.vscode-git-extension-pack.svg
 [#vsce-svg-url-downloads]: https://vsmarketplacebadge.apphb.com/downloads/sugatoray.vscode-git-extension-pack.svg
+--->
 [#vsce-marketplace-url]: https://marketplace.visualstudio.com/items?itemName=sugatoray.vscode-git-extension-pack
 <!-- markdownlint-enable MD041 -->
 
@@ -27,6 +29,7 @@ This extension pack packages some of the most popular (and some of my favorite) 
 | `08` | 🎁 [Commit Message Editor](https://marketplace.visualstudio.com/items?itemName=adam-bender.commit-message-editor) <br/> <p><ul> Edit commit messages in a convenient way. </ul></p> |
 | `09` | 🎁 [Conventional Commits](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits) <br/> <p><ul> 💬Conventional Commits for VSCode. </ul></p> |
 | `10` | 🎁 [GitHub Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) <br/> <p><ul> GitHub theme for VS Code. </ul></p> |
+| `11` | 🎁 [Git Cheatsheet](https://marketplace.visualstudio.com/items?itemName=dzhavat.git-cheatsheet) <br/> <p><ul> Open a Git Cheatsheet directly in VS Code. </ul></p> |
 
 ## Want to see your extension added?
 
