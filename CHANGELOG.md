@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1
+
+- Update display name.
+
 ## 1.1.0
 
 - Update icon (with colored background for greater visibility against dark backgrounds).
