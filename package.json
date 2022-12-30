@@ -2,7 +2,7 @@
   "name": "vscode-git-extension-pack",
   "displayName": "Git Extension Pack",
   "description": "Popular Visual Studio Code extensions for Git",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "sugatoray",
   "author": {
     "name": "Sugato Ray",
@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/sugatoray/vscode-git-extension-pack/issues"
   },
-  "icon": "icon-square.png",
+  "icon": "icon.png",
   "galleryBanner": {
     "color": "#916fdc",
     "theme": "dark"
@@ -44,7 +44,8 @@
     "huizhou.githd",
     "adam-bender.commit-message-editor",
     "vivaxy.vscode-conventional-commits",
-    "GitHub.github-vscode-theme"    
+    "GitHub.github-vscode-theme",
+    "dzhavat.git-cheatsheet"
   ],
   "scripts": {
     "deploy": "vsce publish --yarn"
