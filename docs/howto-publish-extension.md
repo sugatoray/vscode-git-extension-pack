@@ -25,7 +25,13 @@
 2. Install `vsce` on you machine.
 
    - Install `node` on MacOS: `brew install node`
-   - Install VSCE on any OS: `npm install -g vsce`
+   - Install VSCE on any OS: `npm install -g @vscode/vsce`
+     
+     > 🔥 NOTE: Earlier `npm install -g vsce` would have worked. But it has been deprecated. If you run this command, it will show the following warning message:
+     > 
+     > ```sh
+     > npm WARN deprecated vsce@2.15.0: vsce has been renamed to @vscode/vsce. Install using @vscode/vsce instead.
+     > ```
 
 3. Check the validity of the PAT on your machine.
    
