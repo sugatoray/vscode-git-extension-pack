@@ -29,6 +29,11 @@ help:
 	@echo "\n Makefile Commands' Help\n"
 	# Commands:
 	#
+	# install.node      :	Install Node.js
+	# install.vsce      :	Install VSCE
+	# install.ovsx      :	Install OVSX
+	# install.all       :	Install Node.js, VSCE, and OVSX
+	#
 	# vsix.move         :	Move the .vsix artifact(s) under .artifacts folder.
 	# vsix.clear        :	Clear the .vsix files from .artifacts folder.
 	#
@@ -50,6 +55,22 @@ help:
 
 ############################## ..: COMMANDS s:.. ################################
 
+install.node:
+	@echo "\n Installing Node.js... ⏳\n"
+	brew install npm
+
+install.vsce:
+	@echo "\n Installing vsce... ⏳\n"
+	@# Uninstall existing version of vsce with: npm uninstall -g vsce
+	npm install -g @vscode/vsce
+
+install.ovsx:
+	@echo "\n Installing ovsx... ⏳\n"
+	@# Uninstall existing version of ovsx with: npm uninstall -g ovsx
+	npm install -g ovsx
+
+install.all: install.node install.vsce install.ovsx
+
 vsix.move:
 	@echo "\n Moving .vsix files to .artifacts folder... ⏳\n"
 	mv *.vsix ./.artifacts/
@@ -65,9 +86,9 @@ pkg.build:
 pkg.publish:
 	@echo "\n📘📄 Publishing... ⏳\n"
 	# Publish to VS Code Marketplace: using vsce
-	vsce publish -p ${VSCE_PAT}
+	vsce publish -p $VSCE_PAT
 	# Publish to open-vsx.org: using ovsx
-	ovsx publish -p ${OVSX_PAT}
+	ovsx publish -p $OVSX_PAT
 
 pkg.release: pkg.build vsix.move pkg.publish vsix.move vsix.clear
 	@echo "\n✨ Releasing... ⏳\n"
