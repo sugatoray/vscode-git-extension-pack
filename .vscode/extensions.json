@@ -5,6 +5,8 @@
         "sugatoray.vscode-markdown-extension-pack",
         "sugatoray.jinja-extension-pack",
         "ms-vscode.remote-repositories",
-        "ms-vscode-remote.vscode-remote-extensionpack"
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "visbydev.folder-path-color",
+        "royaction.color-manager"
     ]
 }

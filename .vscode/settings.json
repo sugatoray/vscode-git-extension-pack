@@ -1,9 +1,9 @@
 {
     "python.defaultInterpreterPath": "~/miniconda3/envs/fav_env",
     "editor.codeActionsOnSave": {
-        "source.fixAll.markdownlint": true,
+        "source.fixAll.markdownlint": "explicit"
     },
-    "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
+    "workbench.colorTheme": "Material Theme Palenight High Contrast",
     //"workbench.colorTheme": "Monokai",
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
