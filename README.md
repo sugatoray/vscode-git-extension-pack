@@ -30,6 +30,11 @@ This extension pack packages some of the most popular (and some of my favorite) 
 | `09` | 🎁 [Conventional Commits](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits) <br/> <p><ul> 💬Conventional Commits for VSCode. </ul></p> |
 | `10` | 🎁 [GitHub Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) <br/> <p><ul> GitHub theme for VS Code. </ul></p> |
 | `11` | 🎁 [Git Cheatsheet](https://marketplace.visualstudio.com/items?itemName=dzhavat.git-cheatsheet) <br/> <p><ul> Open a Git Cheatsheet directly in VS Code. </ul></p> |
+| `12` | 🎁 [Git Temporal](https://marketplace.visualstudio.com/items?itemName=bee.git-temporal-vscode) <br/> <p><ul> Git Temporal - all about time and time travel. </ul></p> |
+| `13` | 🎁 [Git Branch Warnings](https://marketplace.visualstudio.com/items?itemName=teledemic.branch-warnings) <br/> <p><ul> Warn when you're on the wrong Git branch, like MAIN. </ul></p> |
+| `14` | 🎁 [Emoji Log](https://marketplace.visualstudio.com/items?itemName=ahmadawais.emoji-log-vscode) <br/> <p><ul> Emoji-Log — An Emoji Git commit log messages spec standard. [ 📦👌🐛📖🚀🤖 ‼️ ]. </ul></p> |
+| `15` | 🎁 [Git Stash](https://marketplace.visualstudio.com/items?itemName=arturock.gitstash) <br/> <p><ul> Give extra stash abilities to Code. Visually browse stashes, review and extract changes. Get all stash commands and more. </ul></p> |
+| `16` | 🎁 [Git Merger](https://marketplace.visualstudio.com/items?itemName=shaharkazaz.git-merger) <br/> <p><ul> Simplifies the git merge process. </ul></p> |
 
 ## Want to see your extension added?
 

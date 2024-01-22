@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.2.0
+
+- Added extensions:
+
+  - [x] `bee.git-temporal-vscode` (Git Temporal).
+  - [x] `teledemic.branch-warnings` (Git Branch Warnings).
+  - [x] `ahmadawais.emoji-log-vscode` (Emoji Log).
+  - [x] `arturock.gitstash` (Git Stash).
+  - [x] `shaharkazaz.git-merger` (Git Merger).
+
 ## 1.1.1
 
 - Update display name.
