@@ -99,4 +99,5 @@
        - Why? Dangerously loud laptop fan
     */
     "typescript.disableAutomaticTypeAcquisition": true,
+    "taipyStudio.gUI.elementsFilePaths": [],
 }
