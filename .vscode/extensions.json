@@ -9,6 +9,21 @@
         "visbydev.folder-path-color",
         "royaction.color-manager",
         "optuna.optuna-dashboard",
-        "ms-dotnettools.dotnet-interactive-vscode"
+        "amodio.restore-editors",
+        "fabiospampinato.vscode-terminals",
+        "ethansk.restore-terminals",
+        "westenets.vscode-backup",
+        "nguyenngoclong.terminal-keeper",
+        "iulian-radu-at.save-restore-editors",
+        "chrmarti.regex",
+        "reliutg.visual-regex",
+        "monish.regexsnippets",
+        "csholmq.excel-to-markdown-table",
+        "cweijan.vscode-office",
+        "stateful.runme",
+        "randomfractalsinc.vscode-data-table",
+        "ms-toolsai.datawrangler",
+        "randomfractalsinc.vscode-data-preview",
+        "dutchigor.json-viewer"
     ]
 }
