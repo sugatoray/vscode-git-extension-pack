@@ -16,9 +16,15 @@
 
 ########################## Extesion Specific Parameters #############################
 
-VSCE_PUBLISHER := sugatoray
-VSCE_NAME := vscode-git-extension-pack
-PYTHON := python3
+VSCE_PUBLISHER := sugatoray;
+VSCE_NAME := vscode-git-extension-pack;
+PYTHON := python3;
+# SHELL := "/bin/zsh";
+
+## set SKIP_VSCE to "true" to skip publishing to marketplace.visualstudio.com
+SKIP_VSCE := "false"
+## set SKIP_OVSX to "true" to skip publishing to open-vsx.org
+SKIP_OVSX := "true"
 
 ########################## DONOT CHANGE PARAMETERS BELOW ###############################
 
@@ -117,10 +123,16 @@ pkg.build:
 
 pkg.publish:
 	@echo "\n📘📄 Publishing... ⏳\n"
-	# Publish to VS Code Marketplace: using vsce
-	@vsce publish -p ${VSCE_PAT}
-	# Publish to open-vsx.org: using ovsx
-	@ovsx publish -p ${OVSX_PAT}
+	# Publish to VS Code Marketplace: using vsce [SKIP_VSCE: $(SKIP_VSCE)]
+	@if [[ "$(SKIP_VSCE)" == "false" ]]; then \
+		echo "Publishing to VSCE..."; \
+		# vsce publish -p ${VSCE_PAT}; \
+	fi;
+	# Publish to open-vsx.org: using ovsx [SKIP_OVSX: $(SKIP_OVSX)]
+	@if [[ "$(SKIP_OVSX)" == "false" ]]; then \
+		echo "Publishing to OVSX..."; \
+		# ovsx publish -p ${OVSX_PAT}; \
+	fi;
 
 pkg.release: pkg.build vsix.move pkg.publish vsix.move vsix.clear
 	@echo "\n✨ Releasing... ⏳\n"
@@ -178,3 +190,33 @@ test.envar:
 #     echo "hi" > tmp.txt
 #     cat tmp.txt
 #     rm tmp.txt
+
+.PHONY: test-conditions
+test-conditions:
+	# echo "start"
+	# echo "SKIP_VSCE: ..$(SKIP_VSCE).."
+	# echo "SKIP_OVSX: ..$(SKIP_OVSX).."
+	# echo "HOME: ..${HOME}.."
+	echo "SKIP_VSCE: ..$(SKIP_VSCE).." && \
+	echo "SKIP_OVSX: ..$(SKIP_OVSX)..";
+	# SHELL is $(SHELL)
+	@zsh -c 'echo "SHELL is $(zsh -c 'ps -c $$ | tail -1 | column -t -s " " | cut -d " " -f7')"';
+	@if [[ "$(SKIP_VSCE)" == "false" ]]; then \
+		zsh -c 'echo -e "publish vsce" ${HOME} ${VSCE_PAT}'; \
+	fi;
+	@if [[ "$(SKIP_OVSX)" != "false" ]]; then \
+		echo -e "publish ovsx ${HOME} ${OVSX_PAT}"; \
+	fi;
+	@if [[ "$(SKIP_VSCE)" == "false" ]]; then \
+		echo "publish vsce"; \
+	fi;
+	#(MAKE) test.envar # call another makefile target
+
+.PHONY: test.target1
+test.target1:
+    @ echo "This is target1"
+
+.PHONY: test.target2
+test.target2:
+    #(MAKE) test.target1
+    @ echo "This is target2"

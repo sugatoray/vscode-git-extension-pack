@@ -10,6 +10,9 @@
 VSCE_PUBLISHER := "sugatoray"
 VSCE_NAME := "vscode-git-extension-pack"
 PYTHON := "python3"
+SHELL := "/bin/zsh"
+SKIP_VSCE := "false"  # set to "true" to skip publishing to marketplace.visualstudio.com
+SKIP_OVSX := "true"   # set to "true" to skip publishing to open-vsx.org
 
 ########################## DONOT CHANGE PARAMETERS BELOW ###############################
 
@@ -109,9 +112,15 @@ pkg-build:
 pkg-publish:
 	@echo "\n📘📄 Publishing... ⏳\n"
 	# Publish to VS Code Marketplace: using vsce
-	@vsce publish -p ${VSCE_PAT}
+	if [[ "{{SKIP_VSCE}}" == "false" ]]; then \
+		{{SHELL}} -c 'vsce publish -p ${VSCE_PAT}'; \
+	fi;
+	# @vsce publish -p ${VSCE_PAT}
 	# Publish to open-vsx.org: using ovsx
-	@ovsx publish -p ${OVSX_PAT}
+	if [[ "{{SKIP_OVSX}}" == "false" ]]; then \
+		{{SHELL}} -c 'ovsx publish -p ${OVSX_PAT}'; \
+	fi;
+	# @ovsx publish -p ${OVSX_PAT}
 
 pkg-release: pkg-build vsix-move pkg-publish vsix-move vsix-clear
 	@echo "\n✨ Releasing... ⏳\n"
@@ -168,3 +177,9 @@ test-fun:
     echo "hi" > tmp.txt
     cat tmp.txt
     rm tmp.txt
+
+test-conditions:
+	@ if [[ "{{SKIP_VSCE}}" == "false" ]]; then {{SHELL}} -c 'echo -e "publish vsce ${HOME}"'; fi;
+	@ if [[ "{{SKIP_OVSX}}" != "false" ]]; then \
+		{{SHELL}} -c 'echo -e "publish ovsx ${HOME}"'; \
+	fi;
